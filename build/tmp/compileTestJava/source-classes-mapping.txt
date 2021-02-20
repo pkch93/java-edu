@@ -1,0 +1,28 @@
+edu/pkch/box/BoxingTest.java
+ edu.pkch.box.BoxingTest
+edu/pkch/generic/StackTest.java
+ edu.pkch.generic.StackTest
+edu/pkch/immutable/CounterTest.java
+ edu.pkch.immutable.CounterTest
+edu/pkch/equals/HashCodeNumberTest.java
+ edu.pkch.equals.HashCodeNumberTest
+edu/pkch/enumeration/OrdinalEnumerationTest.java
+ edu.pkch.enumeration.OrdinalEnumerationTest
+edu/pkch/tostring/ATest.java
+ edu.pkch.tostring.ATest
+edu/pkch/future/CompletableFutureTest.java
+ edu.pkch.future.CompletableFutureTest
+edu/pkch/serialize/PersonTest.java
+ edu.pkch.serialize.PersonTest
+edu/pkch/stream/StreamTest.java
+ edu.pkch.stream.StreamTest
+edu/pkch/generic/GenericTest.java
+ edu.pkch.generic.GenericTest
+edu/pkch/approvals/ApprovalTests.java
+ edu.pkch.approvals.ApprovalTests
+edu/pkch/optional/OptionalTest.java
+ edu.pkch.optional.OptionalTest
+edu/pkch/collection/CollectionTest.java
+ edu.pkch.collection.CollectionTest
+edu/pkch/enumeration/MealTest.java
+ edu.pkch.enumeration.MealTest
