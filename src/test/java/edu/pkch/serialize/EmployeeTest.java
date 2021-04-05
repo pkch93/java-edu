@@ -4,21 +4,20 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
 import java.io.*;
-import java.util.Arrays;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class PersonTest {
-    public static final String SERIALIZE_OBJECT_FILE_PATH = "/Users/chulsea/serialize/person.ser";
+class EmployeeTest {
+    public static final String SERIALIZE_OBJECT_FILE_PATH = "/Users/chulsea/serialize/employee.ser";
 
     @Test
     @Order(1)
     void serialize() throws IOException {
-        Person person = new Person("pkch", 28);
+        Employee employee = new Employee("woowabros", "서비스개발팀");
 
         try (FileOutputStream fileOutputStream = new FileOutputStream(SERIALIZE_OBJECT_FILE_PATH)) {
             try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
-                objectOutputStream.writeObject(person);
+                objectOutputStream.writeObject(employee);
             }
         }
     }
@@ -26,17 +25,19 @@ class PersonTest {
     @Test
     @Order(2)
     void deserialize() throws IOException {
-        Person person = null;
+        Employee employee = null;
 
         try (FileInputStream fileInputStream = new FileInputStream(SERIALIZE_OBJECT_FILE_PATH)) {
             try (ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
-                person = (Person) objectInputStream.readObject();
+                employee = (Employee) objectInputStream.readObject();
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             }
         }
 
-        assertThat(person.getName()).isEqualTo("pkch");
-        assertThat(person.getAge()).isEqualTo(28);
+        assertThat(employee.getCompany()).isEqualTo("woowabros");
+        assertThat(employee.getTeam()).isEqualTo("서비스개발팀");
+        assertThat(employee.getName()).isEqualTo("pkch");
+        assertThat(employee.getAge()).isEqualTo(28);
     }
 }
